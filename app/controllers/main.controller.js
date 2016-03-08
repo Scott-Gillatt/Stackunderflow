@@ -16,7 +16,7 @@
             $scope.greetings.push(msg)
         }
 
-        var question = {
+         var question = {
             text: "What is an IIFE in JavaScript?",
             author: "Scott Gillatt",
             date: new Date(),
@@ -117,6 +117,7 @@
                 }]
 
         }
+        $scope.questions = [question]
         //Assign the following variables.
         var questionText = question.text;
         var questionAnswerCount = question.answers.length;
