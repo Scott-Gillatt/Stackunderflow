@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="Stack">
 
 <head>
     <meta charset="UTF-8">
-    <title>Stack Under Flow</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Homework</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body ng-controller="MainController">
+<body ng-controller="StackController">
+    <br>
     <div class="container">
-        {{1+1}}
-        <br>
-        <input type="text" ng-model="name">
-        <br>
-        <button ng-click="greet()">Greet</button>
-        <br> {{greetings}}
-        <ul>
-            <li ng-repeat="greeting in greetings track by $index">Greeting #{{$index+1}}: {{greeting}}</li>
-        </ul>
-        
-        <div ng-repeat="q in questions">
+        <strong>Question:</strong>
+        <div ng-repeat="q in question1">
             {{q.text}}
+            <div class="text-right">
+                Asked: {{q.date}}, {{q.author}}
+            </div>
+            <br>
             <div ng-repeat="a in q.answers">
-                {{a.text}}
+                <question-answer> </question-answer>
+                <div ng-repeat="c in a.comments">
+                    <question-comments> </question-comments>
                 </div>
+            </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
     <script src="app/app.js"></script>
-    <script src="app/controllers/main.controller.js"></script>
-    <script src="app/services/main.service.js"></script>
+    <script src="app/controllers/controller.js"></script>
+    <script src="app/services/dataservice.js"></script>
+    <script src="app/partial/_questionAnswer.js"></script>
+    <script src="app/partial/_questionComments.js"></script>
+
 </body>
 
 </html>

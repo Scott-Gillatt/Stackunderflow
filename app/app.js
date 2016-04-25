@@ -1,5 +1,2 @@
-(function() {
-    'use strict';
-
-    angular.module('app', []);
-})();
+/* global angular */
+var app = angular.module("Stack", [])

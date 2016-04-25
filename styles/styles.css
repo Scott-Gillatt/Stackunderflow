@@ -1,0 +1,13 @@
+.comments-padding{
+    padding-left: 60px;
+}
+.panel{
+    border-left: none;
+    border-right: none;
+}
+.answer{
+    font-size: 1.25em;
+}
+.comments{
+    font-size: .75em;
+}
